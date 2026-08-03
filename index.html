@@ -55,32 +55,79 @@
       font-size: 1rem;
     }
 
+    .hero-image {
+      max-width: 100%;
+      border-radius: 16px;
+      margin: 1.5rem auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    }
+
+    .hero {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      margin: 0 auto;
+    }
+
+    .hero-text {
+      position: absolute;
+      left: 2rem;
+      top: 15%;
+      transform: translateY(0);
+      color: #fff;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-shadow: 0 8px 20px rgba(0, 0, 0, 0.65);
+      max-width: 28rem;
+      font-family: 'Arial Black', 'Helvetica Bold', Arial, sans-serif;
+    }
+
+    .hero-text span {
+      display: block;
+    }
+
+    .hero-text .gold {
+      color: #f6c945;
+      display: inline;
+    }
+
+    .hero-subtext {
+      margin-top: 0.5rem;
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      font-weight: 100;
+      line-height: 1.4;
+      max-width: 22rem;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.9);
+      text-transform: none;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      border-radius: 16px;
+      margin: 1.5rem auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    }
+
   </style>
 </head>
 <body>
-  <h1>SAVE THE NIGHT SKY</h1>
-  <p>Light pollution is the excessive or poorly directed artificial light that affects the night sky, the environment and human health.</p>
-  <h2>Why Does it Matter?</h2>
-  <p>Light pollution has several negative impacts:</p>
-  <ul>
-    <li>It reduces the visibility of stars and constellations, decreasing our connection to the night sky.</li>
-    <li>It disrupts the natural behavior of nocturnal animals, affecting their feeding, reproduction, and migration patterns.</li>
-    <li>It can result in sleep disorders and other health issues in humans due to disrupted circadian rhythms.</li>
-  </ul>
-  <button onclick="revealFact()">Reveal Fact</button>
-  <p id="message" style="margin-top: 1rem; font-weight: bold;"></p>
-  <h2>The Problem</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>80% of people live under light-polluted skies</h3>
-    </div>
-    <div class="card">
-      <h3>Thousands of stars have become invisible to the naked human eye</h3>
-    </div>
-    <div class="card">
-      <h3>Unused light wastes electricity</h3>
+  <div class="hero">
+    <img src="images/jonny-gios-qtpQOpdW86o-unsplash.jpg" alt="Night sky with city lights" class="hero-image">
+    <div class="hero-text">
+      <span>PROTECT</span>
+      <span>OUR <span class="gold">NIGHT SKIES</span></span>
+      <div class="hero-subtext">
+        <div>Light pollution steals the skies.</div>
+        <div>Let's shine a light on the solution.</div>
+      </div>
     </div>
   </div>
-<script src="script.js"></script>
 </body>
 </html>
