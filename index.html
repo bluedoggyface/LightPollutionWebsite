@@ -58,7 +58,8 @@
     }
 
     .hero-image {
-      max-width: 100%;
+      width: 100%;
+      max-width: none;
       border-radius: 16px;
       margin: 0 auto 1.5rem;
       display: block;
@@ -68,9 +69,9 @@
     .hero {
       position: relative;
       display: inline-block;
-      width: 100%;
+      width: calc(100% + 2rem);
       text-align: left;
-      margin: 0 auto;
+      margin: 0 -1rem 0;
     }
 
     .hero-text {
@@ -173,6 +174,18 @@
       background: #f6c945;
     }
 
+    .centered-heading {
+      text-align: center;
+      padding-left: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .centered-heading::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .section-copy {
       max-width: 423px;
       margin: 0;
@@ -212,6 +225,8 @@
       box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
       object-fit: cover;
       transform: translate(-0.4rem, -3.4rem);
+      transition: opacity 1.35s ease;
+      opacity: 1;
     }
 
     .hero-image {
@@ -269,10 +284,65 @@
       cursor: pointer;
     }
 
+  .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1rem;
+      text-transform: none;
+      max-width: 900px;
+    }
+
+    .hero-nav {
+      position: absolute;
+      top: 1.15rem;
+      left: -4.8rem;
+      right: 8.5rem;
+      z-index: 10;
+      justify-content: flex-end;
+    }
+
+    .top-nav a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      padding: 0.3rem 0.65rem 1.55rem;
+      border-radius: 999px;
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .top-nav a.active::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0.35rem;
+      transform: translateX(-50%);
+      width: 2.2rem;
+      height: 2px;
+      background: #f6c945;
+      border-radius: 999px;
+    }
+
+    .top-nav a.active {
+      color: #f6c945;
+    }
   </style>
 </head>
 <body>
   <div class="hero">
+    <nav class="top-nav hero-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="causes.html">Causes</a>
+      <a href="effects.html">Effects</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="resources.html">Resources</a>
+    </nav>
   <img src="images/jonny-gios-qtpQOpdW86o-unsplash.jpg" alt="Night sky mountains" class="hero-image">
     <div class="hero-text">
       <span>PROTECT</span>
@@ -291,11 +361,13 @@
   <h2 class="section-heading">WHAT IS LIGHT POLLUTION?</h2>
   <div class="section-row">
     <div class="section-text">
-      <p class="section-copy">Light pollution is the excessive, misdirected, or invasive use of artificial outdoor lighting that alters natural outdoor light levels and negatively impacts the entire environment. It derives from streetlights, buildings, billboards, or other sources and can brighten up the sky. This makes it harder to see stars and other celestial objects.</p>
+      <p class="section-copy">Light pollution is the excessive, misdirected, or invasive use of artificial outdoor lighting that alters natural outdoor light levels and negatively impacts the entire environment. It derives from streetlights, buildings, billboards, or other sources and can brighten the sky. This makes it harder to see stars and other celestial objects.</p>
       <button class="learn-btn section-button">See the difference!</button>
     </div>
     <img src="images/city_skyline_light_pollution.png" alt="City skyline showing light pollution" class="section-image">
   </div>
+
+  <h2 class="section-heading centered-heading">WHY IT MATTERS</h2>
 
   <div id="learnModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="learnModalTitle">
     <div class="modal-content" role="document">
