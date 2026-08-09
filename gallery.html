@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery | Light Pollution Awareness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 0 1rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #09152e;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .hero {
+      position: relative;
+      display: inline-block;
+      width: calc(100% + 2rem);
+      text-align: left;
+      margin: 0 -1rem 0;
+    }
+    .hero-text {
+      position: absolute;
+      left: 2rem;
+      top: 15%;
+      transform: translateY(0);
+      color: #fff;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-shadow: 0 8px 20px rgba(0, 0, 0, 0.65);
+      max-width: 28rem;
+      font-family: 'Arial Black', 'Helvetica Bold', Arial, sans-serif;
+    }
+    .hero-text span {
+      display: block;
+    }
+    .hero-text .gold {
+      color: #f5c73d;
+      display: inline;
+    }
+    .hero-subtext {
+      margin-top: 0.5rem;
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      font-weight: 100;
+      line-height: 1.4;
+      max-width: 22rem;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.9);
+      text-transform: none;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: none;
+      border-radius: 16px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    }
+    .hero-nav {
+      position: absolute;
+      top: 1.15rem;
+      right: 8.5rem;
+      left: auto;
+      z-index: 10;
+      justify-content: flex-end;
+    }
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      text-transform: none;
+      max-width: 900px;
+    }
+    .top-nav a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      padding: 0.3rem 0.65rem 0.55rem;
+      border-radius: 999px;
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .top-nav a.active::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0.35rem;
+      transform: translateX(-50%);
+      width: 2.2rem;
+      height: 2px;
+      background: #f6c945;
+      border-radius: 999px;
+    }
+    .top-nav a.active {
+      color: #f6c945;
+    }
+    h1 {
+      font-family: 'Arial Black', 'Helvetica Bold', Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-top: 1.5rem;
+    }
+    p {
+      max-width: 700px;
+      margin: 1rem auto;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <nav class="top-nav hero-nav">
+      <a href="index.html">Home</a>
+      <a href="causes.html">Causes</a>
+      <a href="effects.html">Effects</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+    <img src="images/city_skyline_no_light_pollution.png" alt="City skyline with no light pollution" class="hero-image">
+    <div class="hero-text">
+      <span>SEE THE</span>
+      <span><span class="gold">NIGHT SKY</span> RETURN</span>
+      <div class="hero-subtext">Visual evidence of what happens when light pollution is reduced.</div>
+    </div>
+  </div>
+  <h1>Gallery</h1>
+  <p>Explore visuals that show the contrast between bright urban skies and darker natural skies. Images like these help illustrate why reducing light pollution matters.</p>
+</body>
+</html>
 
