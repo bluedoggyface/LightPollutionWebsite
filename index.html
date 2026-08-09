@@ -4,10 +4,11 @@
   <title>Light Pollution Awareness</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', Arial, sans-serif;
       padding: 0 1rem 1rem;
       max-width: 900px;
       margin: 0 auto;
@@ -56,16 +57,6 @@
       margin-top: 0;
       font-size: 1rem;
     }
-
-    .hero-image {
-      width: 100%;
-      max-width: none;
-      border-radius: 16px;
-      margin: 0 auto 1.5rem;
-      display: block;
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-    }
-
     .hero {
       position: relative;
       display: inline-block;
@@ -81,13 +72,13 @@
       transform: translateY(0);
       color: #fff;
       font-size: clamp(1.8rem, 3vw, 3rem);
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1.05;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       text-shadow: 0 8px 20px rgba(0, 0, 0, 0.65);
       max-width: 28rem;
-      font-family: 'Arial Black', 'Helvetica Bold', Arial, sans-serif;
+      font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
     }
 
     .hero-text span {
@@ -184,6 +175,75 @@
     .centered-heading::after {
       left: 50%;
       transform: translateX(-50%);
+    }
+    .why-hero {
+      position: relative;
+      width: calc(100% + 2rem);
+      margin: 0 -1rem 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .why-image {
+      width: 100%;
+      display: block;
+      border-radius: 0; /* container handles rounding */
+      box-shadow: 0 10px 30px rgba(255,255,255,0.12);
+      z-index: 0;
+    }
+    .why-overlay {
+      position: absolute;
+      left: 50%;
+      top: 8%;
+      transform: translateX(-50%);
+      margin: 0;
+      color: #fff;
+      font-family: 'Arial Black', 'Helvetica Bold', Arial, sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.25rem, 4vw, 2rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      padding: 0 1rem;
+      z-index: 2;
+    }
+    .why-star {
+      position: absolute;
+      top: 25%;
+      right: 61.25%;
+      width: 54px;
+      height: auto;
+      pointer-events: none;
+      transform: translate(0, 0);
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+      z-index: 2;
+    }
+    .why-star path {
+      stroke: #ffd24a;
+      fill: none;
+      stroke-width: 6;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      stroke-opacity: 1;
+    }
+    .why-star-label {
+      position: absolute;
+      top: 41%;
+      right: 58%;
+      transform: translateX(0);
+      color: #ffffff;
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.45);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    @media (max-width: 600px) {
+      .why-star { width: 36px; top: 32%; right: 62%; }
+      .why-star-label { font-size: 0.78rem; top: 46%; right: 56%; }
     }
 
     .section-copy {
@@ -367,7 +427,14 @@
     <img src="images/city_skyline_light_pollution.png" alt="City skyline showing light pollution" class="section-image">
   </div>
 
-  <h2 class="section-heading centered-heading">WHY IT MATTERS</h2>
+  <div class="why-hero">
+    <img src="images/why_it_matters_photo.jpg" alt="Why it matters" class="why-image">
+    <h2 class="section-heading centered-heading why-overlay">WHY IT MATTERS</h2>
+    <svg class="why-star" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+      <path d="M50 10 L61 38 L92 38 L66 58 L76 90 L50 72 L24 90 L34 58 L8 38 L39 38 Z" />
+    </svg>
+    <div class="why-star-label">Affects Wildlife</div>
+  </div>
 
   <div id="learnModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="learnModalTitle">
     <div class="modal-content" role="document">
