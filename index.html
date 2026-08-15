@@ -13,44 +13,105 @@
       max-width: 900px;
       margin: 0 auto;
       background: #09152e;
-      color: #fff;
-      min-height: 100vh;
-    }
+      /* Decorative shapes (fixed sizes to avoid viewport scaling) */
+      .why-heart {
+        position: absolute;
+        top: 20%;
+        height: auto;
+        width: 68px; /* heart desktop (slightly increased) */
+        pointer-events: none;
+        transform: translate(0, 0);
+        filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+        z-index: 2;
+        right: 60%;
+      }
 
-    a, button, .card {
-      color: #fff;
-    }
+      .why-heart {
+        position: absolute;
+        top: 22%;
+        height: auto;
+        width: 68px; /* heart desktop (slightly increased) */
+        pointer-events: none;
+        transform: translate(0, 0);
+        filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+        z-index: 2;
+        right: 81.5%;
+      }
 
-    button {
-      background: #b4a823;
-      border: 1px solid #555;
-      color: #000000;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.875rem;
-    }
+      .why-bolt, .why-heart, .why-star {
+        position: absolute;
+        top: 20%;
+        right: 0%;
+        height: auto;
+        width: 68px;
+        pointer-events: none;
+        transform: translate(0, 0);
+        filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+        z-index: 2;
+      }
+      .why-bolt-wrap { position: absolute; right: 29%; top: 26%; z-index: 2; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+      .why-bolt { position: relative; width: 56px; height: auto; transform-origin: center center; transform: rotate(12deg); display: block; }
+      .why-telescope-wrap { position: absolute; right: 8%; top: 23%; z-index: 3; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+      .why-telescope { position: relative; width: 135px; height: auto; pointer-events: none; transform: rotate(-8deg); display: block; }
+      .why-telescope-label { margin-top: 0.35rem; color: #ffffff; font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 0.9rem; text-shadow: 0 3px 6px rgba(0,0,0,0.45); pointer-events: none; white-space: nowrap; z-index: 4; text-align: center; }
+      .why-heart { right: 82%; top: 22%; }
+      .why-star { right: 61.25%; top: 25%; width: 54px; }
 
-    button:hover {
-      background: #736a02;
-    }
+      .why-bolt path,
+      .why-star path,
+      .why-heart path {
+        stroke: #ffd24a;
+        fill: none;
+        stroke-width: 6;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-opacity: 1;
+      }
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+      .why-star-label {
+        position: absolute;
+        top: 41.5%;
+        right: 58%;
+        transform: translateX(0);
+        color: #ffffff;
+        font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.45);
+        pointer-events: none;
+        white-space: nowrap;
+        z-index: 2;
+      }
+      
+        .why-heart-label {
+          position: absolute;
+          top: 41.5%;
+          right: 66%;
+          transform: translateX(-50%);
+          color: #ffffff;
+          font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-shadow: 0 3px 6px rgba(0,0,0,0.45);
+          pointer-events: none;
+          white-space: nowrap;
+          z-index: 2;
+          text-align: center;
+          width: max-content;
+        }
 
-    .card {
-      background: #111;
-      border-radius: 12px;
-      border: 1px solid #333;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
-      padding: 1rem 1.25rem;
-      width: 250px;
-      text-align: left;
+      @media (max-width: 600px) {
+        .why-bolt-wrap { right: 50%; top: 12%; }
+        .why-bolt { width: 44px; transform: rotate(12deg); }
+        .why-star { width: 36px; top: 32%; right: 62%; }
+        .why-heart { width: 50px; top: 8%; right: 78.5%; }
+          .why-star-label { font-size: 0.78rem; top: 46%; right: 56%; }
+          .why-heart-label { font-size: 0.78rem; top: 52%; right: 72%; }
+          .why-bolt-label { font-size: 0.78rem; }
+        .why-telescope-wrap { right: 52%; top: 36%; }
+        .why-telescope { width: 80px; }
+        .why-telescope-label { font-size: 0.78rem; margin-top: 0.2rem; }
+      }
     }
 
     .card h3 {
@@ -240,10 +301,25 @@
       white-space: nowrap;
       z-index: 2;
     }
+    .why-bolt-label {
+      margin-top: -0.23rem;
+      color: #ffffff;
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.45);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 2;
+      text-align: center;
+      width: max-content;
+    }
 
     @media (max-width: 600px) {
       .why-star { width: 36px; top: 32%; right: 62%; }
+      .why-telescope { width: 85px; right: 22%; top: 36%; }
       .why-star-label { font-size: 0.78rem; top: 46%; right: 56%; }
+      .why-bolt-label { font-size: 0.78rem; margin-top: 0.05rem; }
     }
 
     .section-copy {
@@ -430,6 +506,20 @@
   <div class="why-hero">
     <img src="images/why_it_matters_photo.jpg" alt="Why it matters" class="why-image">
     <h2 class="section-heading centered-heading why-overlay">WHY IT MATTERS</h2>
+    <div class="why-bolt-wrap">
+      <svg class="why-bolt" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path d="M44 8 L16 54 L44 54 L36 92 L84 34 L50 40 L62 8 Z" />
+      </svg>
+      <div class="why-bolt-label">Wastes Energy</div>
+    </div>
+    <svg class="why-heart" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+      <path d="M50 78 C24 56 16 40 30 30 C40 22 50 36 50 36 C50 36 60 22 70 30 C84 42 76 58 50 78 Z" />
+    </svg>
+    <div class="why-heart-label">Impacts Human Health</div>
+    <div class="why-telescope-wrap">
+      <img src="images/telescope.png" alt="Telescope" class="why-telescope">
+      <div class="why-telescope-label">Hides the Stars</div>
+    </div>
     <svg class="why-star" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
       <path d="M50 10 L61 38 L92 38 L66 58 L76 90 L50 72 L24 90 L34 58 L8 38 L39 38 Z" />
     </svg>
