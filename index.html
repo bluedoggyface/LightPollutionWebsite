@@ -51,9 +51,10 @@
       }
       .why-bolt-wrap { position: absolute; right: 29%; top: 26%; z-index: 2; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
       .why-bolt { position: relative; width: 56px; height: auto; transform-origin: center center; transform: rotate(12deg); display: block; }
-      .why-telescope-wrap { position: absolute; right: 8%; top: 23%; z-index: 3; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+      .why-telescope-wrap { position: absolute; right: 4%; top: 22%; z-index: 3; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
       .why-telescope { position: relative; width: 135px; height: auto; pointer-events: none; transform: rotate(-8deg); display: block; }
-      .why-telescope-label { margin-top: 0.35rem; color: #ffffff; font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 0.9rem; text-shadow: 0 3px 6px rgba(0,0,0,0.45); pointer-events: none; white-space: nowrap; z-index: 4; text-align: center; }
+      .why-telescope-label { margin-top: -0.5rem; color: #ffffff; font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 0.9rem; text-shadow: 0 3px 6px rgba(0,0,0,0.45); pointer-events: none; white-space: nowrap; z-index: 4; text-align: center; }
+        .why-telescope-label { margin-top: -0.5rem; color: #ffffff; font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 0.9rem; text-shadow: 0 3px 6px rgba(0,0,0,0.45); pointer-events: none; white-space: nowrap; z-index: 4; text-align: center; transform: translateX(-14px); }
       .why-heart { right: 82%; top: 22%; }
       .why-star { right: 61.25%; top: 25%; width: 54px; }
 
@@ -82,6 +83,22 @@
         white-space: nowrap;
         z-index: 2;
       }
+      .why-star-subtext {
+              position: absolute;
+              top: 49%;
+              left: 50%;
+              transform: translateX(-123%);
+              color: rgba(255,255,255,0.92);
+              font-family: 'Inter', Arial, sans-serif;
+              font-weight: 400;
+              font-size: 0.74rem;
+              text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+              pointer-events: none;
+              white-space: normal;
+              max-width: 170px;
+              z-index: 2;
+              text-align: center;
+            }
       
         .why-heart-label {
           position: absolute;
@@ -99,6 +116,22 @@
           text-align: center;
           width: max-content;
         }
+            .why-heart-subtext {
+              position: absolute;
+              top: 49%;
+              right: 66.3%;
+              transform: translateX(-50%);
+              color: rgba(255,255,255,0.92);
+              font-family: 'Inter', Arial, sans-serif;
+              font-weight: 400;
+              font-size: 0.74rem;
+              text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+              pointer-events: none;
+              white-space: normal;
+              max-width: 170px;
+              z-index: 2;
+              text-align: center;
+            }
 
       @media (max-width: 600px) {
         .why-bolt-wrap { right: 50%; top: 12%; }
@@ -107,10 +140,12 @@
         .why-heart { width: 50px; top: 8%; right: 78.5%; }
           .why-star-label { font-size: 0.78rem; top: 46%; right: 56%; }
           .why-heart-label { font-size: 0.78rem; top: 52%; right: 72%; }
+          .why-heart-subtext { font-size: 0.68rem; top: 56%; right: 72%; }
           .why-bolt-label { font-size: 0.78rem; }
-        .why-telescope-wrap { right: 52%; top: 36%; }
+        .why-telescope-wrap { right: 48%; top: 32%; }
         .why-telescope { width: 80px; }
-        .why-telescope-label { font-size: 0.78rem; margin-top: 0.2rem; }
+        .why-telescope-label { font-size: 0.78rem; margin-top: -0.17rem; }
+          .why-telescope-label { font-size: 0.78rem; margin-top: -0.17rem; transform: translateX(6px); }
       }
     }
 
@@ -317,7 +352,7 @@
 
     @media (max-width: 600px) {
       .why-star { width: 36px; top: 32%; right: 62%; }
-      .why-telescope { width: 85px; right: 22%; top: 36%; }
+      .why-telescope { width: 85px; right: 22%; top: 32%; }
       .why-star-label { font-size: 0.78rem; top: 46%; right: 56%; }
       .why-bolt-label { font-size: 0.78rem; margin-top: 0.05rem; }
     }
@@ -516,6 +551,7 @@
       <path d="M50 78 C24 56 16 40 30 30 C40 22 50 36 50 36 C50 36 60 22 70 30 C84 42 76 58 50 78 Z" />
     </svg>
     <div class="why-heart-label">Impacts Human Health</div>
+    <div class="why-heart-subtext">Light Pollution can suppress nightly melatonin production, and interfere with the body's natural circadian rhythm. This can jeopardize sleep quality, lead to fatigue, or cause a higher risk of long-term metabolic and mental health conditions.</div>
     <div class="why-telescope-wrap">
       <img src="images/telescope.png" alt="Telescope" class="why-telescope">
       <div class="why-telescope-label">Hides the Stars</div>
@@ -524,6 +560,7 @@
       <path d="M50 10 L61 38 L92 38 L66 58 L76 90 L50 72 L24 90 L34 58 L8 38 L39 38 Z" />
     </svg>
     <div class="why-star-label">Affects Wildlife</div>
+    <div class="why-star-subtext">Light pollution can alter the feeding, movement, and hunting patterns of nocturnal animals. Additionally, it can disrupt migratory patterns by disorientating animals. Light polluion also overall interferes with animals' circadian rhythms, affecting behaviors.</div>
   </div>
 
   <div id="learnModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="learnModalTitle">
@@ -540,7 +577,7 @@
       <button class="modal-close" aria-label="Close">×</button>
       <h2 id="actionModalTitle">Take Action</h2>
       <p>Join local efforts: switch to shielded fixtures, use warmer bulbs, or simply donate to dedicated causes. (Visit Resources Section)</p>
-      <p><a href="https://www.restorethenight.org" target="_blank" rel="noopener" style="color:#f6c945;">Resources Tab</a></p>
+      <p><a href="https://www.restorethenight.org/resources" target="_blank" rel="noopener" style="color:#f6c945;">Resources Tab</a></p>
     </div>
   </div>
 
